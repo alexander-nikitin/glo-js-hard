@@ -13,18 +13,10 @@ for (i=0; i < num.length; i++) {
   multi = multi * num[i];
 }
 
+console.log('Произведение всех цифр числа: ' + multi);
+
 multi = multi ** 3;
 
-multi = String(multi);
-multi = multi.split('');
+console.log(multi);
 
-let total = '';
-
-for (i = 0; i < 2; i++) {
-  total += multi[i];
-}
-
-total = Number(total);
-
-console.log('total = ' + total);
-console.log('Тип данных в переменной total = ' + typeof(total));
+console.log('Вывод первых двух цифр числа: ' + multi.toString().substring(0, 2));
