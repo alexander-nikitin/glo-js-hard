@@ -1,36 +1,18 @@
-let lang;
-let week = [];
-let namePerson;
+let str;
 
-lang = 'ru';
+str = 10;
 
-week = {
-  'ru': ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'],
-  'en': ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+function getString(a) {
+  if (tyeof(a) != 'string') {
+    console.log('Аргумент не является строкой');
+  } else {
+    a.trim();
+
+    if (a.length > 30) {
+      
+      console.log(a + '...');
+    }
+    
+  }
 }
 
-if ( lang == 'ru' ) {
-  console.log(week['ru']);
-} else if ( lang == 'en' ) {
-  console.log(week['en']);
-}
-
-console.log(week);
-
-switch (lang) {
-  case 'ru':
-    console.log(week['ru']);
-    break;
-  case 'en':
-    console.log(week['en']);
-}
-
-console.log(week);
-
-console.log(week[lang]);
-
-namePerson = 'Артем';
-
-namePerson === 'Артем' ? console.log('Директор') :
-namePerson === 'Максим' ? console.log('Преподаватель') :
-console.log('Студент');
