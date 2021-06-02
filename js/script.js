@@ -1,20 +1,16 @@
-let str;
+let arr = ['132', '423423', '2324', '65745', '4356456', '98789', '7654353'];
 
-str = '       Какая-то очень длинная строка, которую нужно очень долго читать, такое ощущение будто она никогда не заканчивается     ';
-
-function getString(a) {
-  if (typeof(a) != 'string') {
-    console.log('Аргумент не является строкой');
-  } else {
-    a = a.trim()
-
-    if (a.length > 30) {
-      console.log(a.substring(0, 30) + '...');
-    } else {
-      console.log(a);
-    }
-    
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i].substring(0, 1) === '2' || arr[i].substring(0, 1) === '4') {
+    console.log(arr[i]);
   }
 }
 
-getString(str);
+prime: for (let i = 2; i <= 100; i++) {
+  for (let j = 2; j < i; j++) {
+    if ( i % j === 0) {
+      continue prime;
+    }
+  }
+  console.log(i);
+}
