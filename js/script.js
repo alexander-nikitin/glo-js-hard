@@ -8,9 +8,10 @@ for (let i = 0; i < arr.length; i++) {
 
 prime: for (let i = 2; i <= 100; i++) {
   for (let j = 2; j < i; j++) {
-    if ( i % j === 0) {
+    if ( i % j === 0 ) {
       continue prime;
     }
   }
-  console.log(i);
+  console.log(i + ' - Простое число');
+  console.log('Делители этого числа: ' + 1 + ' и ' + i);
 }
